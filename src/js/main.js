@@ -1,3 +1,5 @@
+
+
 // ─── CURSOR ───────────────────────────────────────────
 const dot = document.querySelector('.cursor-dot');
 const ring = document.querySelector('.cursor-ring');
@@ -19,8 +21,15 @@ followRing();
 // GSAP setup
 gsap.registerPlugin(ScrollTrigger);
 
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
+
+// force again after load (for safety)
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
+});
+
+function hidePageOverlay() {
+  const overlay = document.getElementById('pageOverlay');
+  if (overlay) overlay.style.display = 'none';
 }
 
 // Hero intro
@@ -48,8 +57,10 @@ gsap.to('#pageOverlay', {
   duration: 1.1,
   ease: 'expo.inOut',
   delay: 0.2,
-  onComplete: () => document.getElementById('pageOverlay').style.display = 'none'
+  onComplete: hidePageOverlay
 });
+
+setTimeout(hidePageOverlay, 2500);
 
 gsap.to('.hero-blob-1', {
   y: '-6%', x: '3%',
@@ -80,8 +91,7 @@ window.addEventListener('pageshow', () => {
   requestAnimationFrame(() => ScrollTrigger.refresh());
 });
 
-
-// ─── WORK ITEMS: reveal ───────────────────────────────
+// Work items reveal
 gsap.utils.toArray('.work-item').forEach((el, i) => {
   gsap.from(el, {
     scrollTrigger: { trigger: el, start: 'top 85%' },
@@ -93,7 +103,7 @@ gsap.utils.toArray('.work-item').forEach((el, i) => {
   });
 });
 
-// ─── WOW 3: ABOUT — background color flash ────────────
+// About reveal
 gsap.timeline({
   scrollTrigger: {
     trigger: '#about',
@@ -121,7 +131,7 @@ gsap.timeline({
     ease: 'power3.out'
   }, '-=0.35');
 
-// ─── SERVICES ITEMS: stagger in ───────────────────────
+// Services items reveal
 gsap.utils.toArray('.service-item').forEach((el, i) => {
   gsap.from(el, {
     scrollTrigger: { trigger: el, start: 'top 90%' },
@@ -130,23 +140,6 @@ gsap.utils.toArray('.service-item').forEach((el, i) => {
   });
 });
 
-// ─── WOW 4: PROCESS — Pinned step activation ──────────
-const steps = document.querySelectorAll('.process-step');
-const totalSteps = steps.length;
-
-ScrollTrigger.create({
-  trigger: '#process',
-  start: 'top top',
-  end: 'bottom bottom',
-  scrub: true,
-  onUpdate: self => {
-    const idx = Math.floor(self.progress * totalSteps);
-    const clamped = Math.min(idx, totalSteps - 1);
-    steps.forEach((s, i) => {
-      s.classList.toggle('active', i <= clamped);
-    });
-  }
-});
 
 // ─── WOW 5: CONTACT — headline clip reveal ────────────
 ScrollTrigger.create({
