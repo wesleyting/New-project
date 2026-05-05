@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOJO MEDIA — Creative Studio</title>
+<link rel="icon" href="assets/images/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,700;0,900;1,900&family=Libre+Baskerville:ital@1&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+
+<!-- Cursor -->
+<div class="cursor">
+  <div class="cursor-ring"></div>
+  <div class="cursor-dot"></div>
+</div>
+
+<!-- Page Transition Overlay -->
+<div id="pageOverlay" style="position:fixed;inset:0;z-index:9000;background:var(--blue);transform-origin:top;"></div>
+
+<!-- Navigation -->
+<nav>
+  <a href="#" class="nav-logo" aria-label="Mojo Media">
+    <img src="assets/images/mojo-logo.png" alt="Mojo Media">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">Studio</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu-overlay" aria-hidden="true"></div>
+<aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#work">Work</a>
+  <a href="#about">Studio</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</aside>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-bg-blob hero-blob-1"></div>
+  <div class="hero-bg-blob hero-blob-2"></div>
+  <div class="hero-image-strip" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="hero-label">MOJO MEDIA — Est. 2023</p>
+    <h1 class="hero-headline">
+      <span class="line"><span class="word">MOJO</span>&nbsp;<span class="word outline-text">MEDIA</span></span>
+      <span class="line"><span class="word blue-text">CREATIVE</span></span>
+      <span class="line"><span class="word">STUDIO</span><span class="word red-text">.</span></span>
+    </h1>
+    <div class="hero-sub">
+      <span class="hero-sub-left">
+        <span class="scroll-meter" aria-hidden="true"><span></span></span>
+        Scroll to explore
+      </span>
+      <span class="hero-sub-right">Portfolio 2024 ✦</span>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span class="marquee-item">Branding <span>✦</span></span>
+      <span class="marquee-item">Social Media <span>✦</span></span>
+      <span class="marquee-item">Motion Graphics <span>✦</span></span>
+      <span class="marquee-item">Web Design <span>✦</span></span>
+      <span class="marquee-item">Free Consultation <span>✦</span></span>
+    </div>
+    <div class="marquee-group" aria-hidden="true">
+      <span class="marquee-item">Branding <span>✦</span></span>
+      <span class="marquee-item">Social Media <span>✦</span></span>
+      <span class="marquee-item">Motion Graphics <span>✦</span></span>
+      <span class="marquee-item">Web Design <span>✦</span></span>
+      <span class="marquee-item">Free Consultation <span>✦</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── WORK ─── -->
+<section id="work">
+  <div style="max-width:1400px;margin:0 auto;">
+    <div class="section-header">
+      <div>
+        <p class="section-label">Selected Work</p>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <span class="section-count">2024-2026</span>
+    </div>
+    <div class="work-grid">
+      <div class="work-item">
+        <div class="work-bg" style="background:linear-gradient(145deg,#0d0d1a 0%,#275BC1 100%)">
+          <span class="work-bg-text">NOVA</span>
+        </div>
+        <div class="work-overlay">
+          <p class="work-cat">Brand Identity</p>
+          <h3 class="work-name">Nova Finance</h3>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="work-bg" style="background:linear-gradient(145deg,#1a0808 0%,#CE2D2D 100%)">
+          <span class="work-bg-text">FLUX</span>
+        </div>
+        <div class="work-overlay">
+          <p class="work-cat">Motion / Campaign</p>
+          <h3 class="work-name">Flux Records</h3>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="work-bg" style="background:linear-gradient(145deg,#0a1a14 0%,#1b4332 100%)">
+          <span class="work-bg-text">ARCH</span>
+        </div>
+        <div class="work-overlay">
+          <p class="work-cat">Digital Experience</p>
+          <h3 class="work-name">Arch Studio</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-left">
+      <p class="section-label" style="color:rgba(13,13,13,0.4)">The Studio</p>
+      <h2 class="about-title">
+        <span class="stroke">WE</span><br>
+        <span class="colored">BUILD</span><br>
+        <span>VISION.</span>
+      </h2>
+      <div class="about-cutout">
+        <div class="about-cutout-inner">
+          <div class="about-cutout-text">MOJO<br>OVER<br>NOISE.</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <p class="about-body">
+        <strong>MOJO MEDIA</strong> is a creative studio obsessed with the intersection of ideas and aesthetics. We don't make things that fit — we make things that lead. From brand systems to moving images, each project is a chance to <strong>reinvent the visual language</strong> of an industry.
+      </p>
+      <p class="about-body">
+        Founded by designers and directors who spent years inside the machine, we came out the other side with one belief: <strong>the most powerful tool a brand has is its vision.</strong>
+      </p>
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num">68+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat" style="padding-left:24px;">
+          <div class="stat-num">14</div>
+          <div class="stat-label">Awards</div>
+        </div>
+        <div class="stat" style="padding-left:24px;">
+          <div class="stat-num">5yr</div>
+          <div class="stat-label">Active</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICES ─── -->
+<section id="services">
+  <div class="services-inner">
+    <div class="section-header">
+      <div>
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">Services</h2>
+      </div>
+    </div>
+    <ul class="services-list">
+      <li class="service-item">
+        <span class="service-num">01</span>
+        <span class="service-name">Brand Identity</span>
+        <span class="service-arrow">→</span>
+      </li>
+      <li class="service-item">
+        <span class="service-num">02</span>
+        <span class="service-name">Motion Design</span>
+        <span class="service-arrow">→</span>
+      </li>
+      <li class="service-item">
+        <span class="service-num">03</span>
+        <span class="service-name">Art Direction</span>
+        <span class="service-arrow">→</span>
+      </li>
+      <li class="service-item">
+        <span class="service-num">04</span>
+        <span class="service-name">Digital Experience</span>
+        <span class="service-arrow">→</span>
+      </li>
+      <li class="service-item">
+        <span class="service-num">05</span>
+        <span class="service-name">Editorial Design</span>
+        <span class="service-arrow">→</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ─── PROCESS (Pinned Scroll) ─── -->
+<section id="process">
+  <div class="process-sticky">
+    <div class="process-inner">
+      <p class="process-label" id="processLabel">Our Process</p>
+      <div class="process-steps" id="processSteps">
+        <div class="process-step active" data-step="0">
+          <div class="process-step-num">01</div>
+          <h3 class="process-step-title">Discover &amp;<br>Define</h3>
+          <p class="process-step-body">Deep immersion into your world. We interrogate assumptions, dissect competitors, and find the white space where your brand can breathe.</p>
+        </div>
+        <div class="process-step" data-step="1">
+          <div class="process-step-num">02</div>
+          <h3 class="process-step-title">Shape &amp;<br>Concept</h3>
+          <p class="process-step-body">Rapid ideation across visual territories. No stone unturned — we pursue every thread until something true reveals itself.</p>
+        </div>
+        <div class="process-step" data-step="2">
+          <div class="process-step-num">03</div>
+          <h3 class="process-step-title">Craft &amp;<br>Build</h3>
+          <p class="process-step-body">Where vision becomes artifact. Every pixel, frame, and word is placed with intention. This is where obsession pays off.</p>
+        </div>
+        <div class="process-step" data-step="3">
+          <div class="process-step-num">04</div>
+          <h3 class="process-step-title">Launch &amp;<br>Evolve</h3>
+          <p class="process-step-body">We don't just deliver and disappear. We partner through rollout, iteration, and the long arc of a brand becoming itself.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Clients Marquee -->
+<div class="clients-wrap">
+  <div class="clients-track">
+    <span class="client-name">Aether Labs</span>
+    <span class="client-name">·</span>
+    <span class="client-name">Volta Studio</span>
+    <span class="client-name">·</span>
+    <span class="client-name">Meridian Records</span>
+    <span class="client-name">·</span>
+    <span class="client-name">Onyx Capital</span>
+    <span class="client-name">·</span>
+    <span class="client-name">Arc Fashion</span>
+    <span class="client-name">·</span>
+    <span class="client-name">Pulse Media</span>
+    <span class="client-name">·</span>
+    <span class="client-name">Aether Labs</span>
+    <span class="client-name">·</span>
+    <span class="client-name">Volta Studio</span>
+    <span class="client-name">·</span>
+    <span class="client-name">Meridian Records</span>
+    <span class="client-name">·</span>
+    <span class="client-name">Onyx Capital</span>
+    <span class="client-name">·</span>
+    <span class="client-name">Arc Fashion</span>
+    <span class="client-name">·</span>
+    <span class="client-name">Pulse Media</span>
+    <span class="client-name">·</span>
+  </div>
+</div>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="contact-inner">
+    <h2 class="contact-headline">
+      <span class="fill">LET'S</span><br>
+      <span class="outline">MAKE</span><br>
+      <span class="accent">SOMETHING.</span>
+    </h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>New Business</p>
+        <a href="mailto:hello@mojomedia.co">hello@mojomedia.co</a>
+        <p>Based In</p>
+        <a href="#">New York, USA</a>
+        <p>Working Hours</p>
+        <a href="#">Mon–Fri, 9–6 EST</a>
+      </div>
+      <div class="contact-cta">
+        <a href="mailto:hello@mojomedia.co" class="cta-btn">
+          START A<br>PROJECT<br>↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <span class="footer-logo">MOJO.</span>
+  <span class="footer-copy">© 2024 Mojo Media</span>
+  <div class="footer-socials">
+    <a href="#">Instagram</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Twitter</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="src/js/main.js"></script>
+</body>
+</html>
